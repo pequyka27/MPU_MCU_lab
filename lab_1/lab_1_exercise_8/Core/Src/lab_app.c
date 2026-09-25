@@ -1,7 +1,7 @@
 #include "main.h"
 #include "lab_app.h"
 
-// LED 0 o vi tri 12 gio, cac LED tiep theo theo chieu kim dong ho.
+
 uint16_t ledPins[12] = {
     GPIO_PIN_4, GPIO_PIN_5, GPIO_PIN_6, GPIO_PIN_7,
     GPIO_PIN_8, GPIO_PIN_9, GPIO_PIN_10, GPIO_PIN_11,
@@ -32,7 +32,7 @@ void clearNumberOnClock(int num)
 void runExercise(void)
 {
     clearAllClock();
-    // Bat lan luot, giu nguyen cac LED da bat truoc do.
+
     for (int i=0; i<12; i++) {
         setNumberOnClock(i);
         HAL_Delay(1000);

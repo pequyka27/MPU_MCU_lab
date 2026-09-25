@@ -1,7 +1,7 @@
 #include "main.h"
 #include "lab_app.h"
 
-// LED 0 o vi tri 12 gio, cac LED tiep theo theo chieu kim dong ho.
+
 uint16_t ledPins[12] = {
     GPIO_PIN_4, GPIO_PIN_5, GPIO_PIN_6, GPIO_PIN_7,
     GPIO_PIN_8, GPIO_PIN_9, GPIO_PIN_10, GPIO_PIN_11,
@@ -29,7 +29,7 @@ void clearNumberOnClock(int num)
     }
 }
 
-// Gio ban dau khi reset, co the sua truc tiep o day.
+
 int hour=10;
 int minute=10;
 int second=0;
@@ -40,7 +40,7 @@ void runExercise(void)
     setNumberOnClock(hour % 12);
     setNumberOnClock(minute / 5);
     setNumberOnClock(second / 5);
-    // Neu cac kim trung nhau thi chung mot LED.
+
     HAL_Delay(1000);
 
     second++;

@@ -3,7 +3,7 @@
 
 void display7SEG(int num)
 {
-    // Thu tu a, b, c, d, e, f, g. Muc 0 la sang, muc 1 la tat.
+
     int digits[10][7] = {
         {0,0,0,0,0,0,1}, // 0
         {1,0,0,1,1,1,1}, // 1
@@ -36,7 +36,7 @@ void display7SEG(int num)
 
 void runExercise(void)
 {
-    // Bac/Nam do, Dong/Tay xanh. Dem nguoc cho huong Bac/Nam.
+
     HAL_GPIO_WritePin(GPIOA, TRAFFIC_MASK, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOA, NS_RED_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(GPIOA, EW_GREEN_Pin, GPIO_PIN_RESET);
@@ -45,7 +45,7 @@ void runExercise(void)
         HAL_Delay(1000);
     }
 
-    // Bac/Nam van do, Dong/Tay chuyen vang.
+
     HAL_GPIO_WritePin(GPIOA, EW_GREEN_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOA, EW_YELLOW_Pin, GPIO_PIN_RESET);
     for (int count=2; count>=1; count--) {
@@ -53,7 +53,7 @@ void runExercise(void)
         HAL_Delay(1000);
     }
 
-    // Bac/Nam xanh, Dong/Tay do.
+
     HAL_GPIO_WritePin(GPIOA, TRAFFIC_MASK, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOA, NS_GREEN_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(GPIOA, EW_RED_Pin, GPIO_PIN_RESET);
@@ -62,7 +62,7 @@ void runExercise(void)
         HAL_Delay(1000);
     }
 
-    // Bac/Nam chuyen vang, Dong/Tay van do.
+
     HAL_GPIO_WritePin(GPIOA, NS_GREEN_Pin, GPIO_PIN_SET);
     HAL_GPIO_WritePin(GPIOA, NS_YELLOW_Pin, GPIO_PIN_RESET);
     for (int count=2; count>=1; count--) {
